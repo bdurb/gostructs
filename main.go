@@ -45,3 +45,7 @@ func (p person) print() {
 	fmt.Println(p)
 	fmt.Printf("%+v", p)
 }
+
+// reference types dont need pointers.  (slices, maps, channels, pointers, functions)
+
+// value types need pointers to change (int, float, string, bool, structs)
