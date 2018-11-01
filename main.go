@@ -32,7 +32,13 @@ func main() {
 			zipCode: 89000,
 		},
 	}
+	// jimPointer := &jim  getting the memory address of the struct jim (pointer)
+	jim.updateName("Jimmy")
 	jim.print()
+}
+
+func (pointerToPerson *person) updateName(newFirstName string) { // *pointer (type) type description, working with a pointer to a person
+	(*pointerToPerson).firstName = newFirstName // turning memory address back into a value (pointer)
 }
 
 func (p person) print() {
